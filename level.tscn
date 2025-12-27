@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d0exnin4pjv6h"]
+
+[ext_resource type="PackedScene" uid="uid://b6iv0hgnw2j7d" path="res://player.tscn" id="1_u52ul"]
+
+[sub_resource type="Gradient" id="Gradient_u52ul"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vonw3"]
+gradient = SubResource("Gradient_u52ul")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u52ul"]
+
+[node name="Level" type="Node2D" unique_id=1629268939]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2027199107]
+position = Vector2(0, 23)
+scale = Vector2(2.015625, 8)
+texture = SubResource("GradientTexture1D_vonw3")
+
+[node name="Player" parent="." unique_id=150825197 instance=ExtResource("1_u52ul")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2040133947]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2091208444]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=308994159]
+position = Vector2(0, 19)
+shape = SubResource("WorldBoundaryShape2D_u52ul")
