@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cmain"]
+
+[ext_resource type="Script" uid="uid://csmo1wrdr5gcf" path="res://network_manager.gd" id="1_network"]
+[ext_resource type="Script" uid="uid://mn13g4umsg0n" path="res://ui.gd" id="2_ui"]
+
+[node name="Main" type="Node2D" unique_id=1324887897]
+
+[node name="NetworkManager" type="Node" parent="." unique_id=1536351818]
+script = ExtResource("1_network")
+
+[node name="Players" type="Node2D" parent="." unique_id=245431489]
+
+[node name="UI" type="Control" parent="." unique_id=2090282405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ui")
+
+[node name="Panel" type="Panel" parent="UI" unique_id=52314625]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 280.0
+offset_bottom = 220.0
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel" unique_id=61262024]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 250.0
+offset_bottom = 190.0
+
+[node name="Title" type="Label" parent="UI/Panel/VBox" unique_id=1421268210]
+layout_mode = 2
+text = "멀티플레이어 데모"
+
+[node name="Spacer1" type="Control" parent="UI/Panel/VBox" unique_id=848902913]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="HostButton" type="Button" parent="UI/Panel/VBox" unique_id=462607655]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+text = "서버 호스트"
+
+[node name="Spacer2" type="Control" parent="UI/Panel/VBox" unique_id=1491808236]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="IPInput" type="LineEdit" parent="UI/Panel/VBox" unique_id=1078460833]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+text = "127.0.0.1"
+placeholder_text = "서버 IP"
+
+[node name="JoinButton" type="Button" parent="UI/Panel/VBox" unique_id=271617998]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+text = "서버 접속"
+
+[node name="Spacer3" type="Control" parent="UI/Panel/VBox" unique_id=1354205973]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="UI/Panel/VBox" unique_id=2020655621]
+layout_mode = 2
+text = "대기 중"
+
+[node name="Instructions" type="Label" parent="UI" unique_id=1190472555]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 240.0
+offset_right = 400.0
+offset_bottom = 300.0
+text = "조작: WASD 또는 방향키
+초록색 = 내 캐릭터 / 주황색 = 상대방"

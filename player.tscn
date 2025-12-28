@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bplayer"]
+
+[ext_resource type="Script" uid="uid://djt0tcc838fm1" path="res://player.gd" id="1_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(50, 50)
+
+[node name="Player" type="CharacterBody2D" unique_id=513784070]
+script = ExtResource("1_script")
+
+[node name="Sprite" type="ColorRect" parent="." unique_id=322805610]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2119011818]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Label" type="Label" parent="." unique_id=1188833463]
+offset_left = -40.0
+offset_top = -50.0
+offset_right = 40.0
+offset_bottom = -27.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=69946968]
